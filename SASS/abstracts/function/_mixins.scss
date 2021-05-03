@@ -1,0 +1,61 @@
+@import "../variables";
+
+
+@mixin flex(
+  $flexDirection: column,
+  $justifyContent: center,
+  $textAlign: inherit,
+  $flexWrap: wrap
+) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: center;
+  flex-direction: $flexDirection;
+  flex-wrap: $flexWrap;
+  text-align: $textAlign;
+}
+
+@mixin absolute($top: 0, $left: 0, $right: unset, $bottom: unset) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+@mixin button() {
+  cursor: pointer;
+}
+
+@mixin images() {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+@mixin flexAlternate($height) {
+  @include flex(row);
+  .child {
+    width: 50%;
+    height: $height;
+
+    .childIMG {
+      @include images()
+    }
+
+  }
+
+  .two {
+    @include flex(column, center, center, wrap);
+
+    h2, p {
+      width: 50%;
+    }
+  }
+}

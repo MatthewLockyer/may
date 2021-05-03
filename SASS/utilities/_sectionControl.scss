@@ -1,0 +1,40 @@
+@import "../abstracts/variables";
+
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+
+.sectionPadding {
+    padding: 10em 0;
+  }
+  
+.dark {
+  background: $clr--background-dark;
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $clr-title-light;
+  }
+
+  p {
+    color: $clr-text-light;
+  }
+
+  
+  li, a {
+    color: $clr-text-light;
+
+    &:hover {
+      color: $clr-title-light;
+    }
+  }
+
+  .navLine {
+    background: $clr-title-light!important;
+
+  }
+}

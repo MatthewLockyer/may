@@ -1,0 +1,133 @@
+@import "../abstracts/variables";
+@import "../utilities/sectionControl";
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: none !important;
+  // backdrop-filter: blur(5px);
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0 1.5em;
+  // box-shadow: $box-shdw-four;
+  min-height: 8vh;
+  align-items: center;
+
+  .logo {
+    width: 50px;
+    height: 30px;
+    filter: brightness(0%);
+    cursor: pointer;
+  }
+
+  .navLinks {
+    list-style: none;
+
+    width: 20%;
+
+    justify-content: space-around;
+    font-weight: 500;
+
+    li {
+      cursor: pointer;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      // color: $clr-text-dark;
+
+      a {
+        all: unset;
+        color: rgba(255, 255, 255, 0.61);
+        // color: white;
+      }
+
+      // &:hover,
+      // &:active {
+      //   color: $clr-accent;
+      // }
+    }
+  }
+
+  .burgerMenu {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .navLine {
+      height: 2px;
+      width: 50px;
+      background: rgb(0, 0, 0);
+      margin: 5px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .navLinks {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: $clr--background-dark;
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: all 0.4s ease;
+
+    li {
+      text-align: center;
+      width: 50%;
+      padding: 20px 0;
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    .navLinksLine {
+      height: 2px;
+      width: 80%;
+      background: rgba(255, 255, 255, 0.37);
+    }
+  }
+
+  .navLinksShow {
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .navLinks {
+    display: flex !important;
+    min-width: 500px;
+    flex-direction: row;
+    align-items: center;
+
+    .navLinksLine {
+      display: none;
+    }
+  }
+
+  .burgerMenu {
+    display: none !important;
+  }
+}
+
+@keyframes navLinkFade {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

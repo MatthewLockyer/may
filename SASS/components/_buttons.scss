@@ -1,0 +1,32 @@
+button {
+    padding: 18px 32px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: $brd-radius;
+    cursor: pointer;
+  }
+  
+  .primaryButton {
+    border: 2px solid $clr-accent;
+    background: $clr-accent;
+    color: $clr-title-light;
+  }
+  
+  .secondaryButton {
+    border: 2px solid $clr-accent;
+    background: transparent;
+    color: $clr-accent;
+  }
+  
+  .tertiaryButton {
+    border: 0px solid $clr-accent;
+    background: transparent;
+    color: $clr-title-dark;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+  }

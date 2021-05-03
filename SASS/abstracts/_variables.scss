@@ -1,0 +1,32 @@
+// :root {
+//     --clr--background-light: hsl(0, 0%, 97%);
+//     --clr--background-dark: hsl(0, 0%, 2%);
+//     --clr--background-dark-lighter: hsl(0, 0%, 15%);
+//     --clr-title-dark: rgb(20, 20, 20);
+//     --clr-title-light: rgb(255, 255, 255);
+//     --clr-text-dark: rgb(36, 36, 36);
+//     --clr-text-light: rgba(235, 235, 235, 0.732);
+//     --clr-accent: hsl(229, 92%, 40%);
+
+//     --brd-radius: 10px;
+
+//     --box-shdw-four: 0 15px 25px hsla(0, 0%, 27%, 0.15),
+//       0 5px 10px hsla(0, 0%, 41%, 0.05);
+// }
+
+$clr--background-light: hsl(0, 0%, 97%);
+$clr--background-dark: linear-gradient(125deg, #161230, #191530 50%, #05044d);
+$clr--background-dark-lighter: hsl(0, 0%, 9%);
+
+$clr-title-dark: rgb(20, 20, 20);
+$clr-title-light: rgb(255, 255, 255);
+
+$clr-text-dark: rgb(36, 36, 36);
+$clr-text-light: rgba(235, 235, 235, 0.732);
+
+$clr-accent: hsl(103, 100%, 67%);
+
+$brd-radius: 10px;
+
+$box-shdw-four: 0 15px 25px hsla(0, 0%, 27%, 0.15);
+//       0 5px 10px hsla(0, 0%, 41%, 0.05);
